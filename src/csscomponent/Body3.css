@@ -1,0 +1,22 @@
+.col-lg-4 {
+    width: 33.33%;
+    text-align: center;
+}
+
+.parag{
+    width: 250px;
+    text-align: center;
+    margin-left: 100px;
+}
+*, ::after, ::before{
+    box-sizing: border-box;
+}
+div{
+    display: block;
+}
+.row{
+    max-width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+

@@ -1,0 +1,28 @@
+.list-page{
+    
+    background-color:rgb(177, 175, 173);
+}
+.listdog-h2{
+    text-align: center;
+    
+}
+.addog-btn{
+    background-color: #27ac3d;
+    cursor: pointer;
+    color: rgb(14, 13, 13);
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    border-radius: 5px;
+    
+    margin-left: 10px;
+    margin-bottom: 60px;
+    transition: .3s;  
+    display: inline-flex;
+    
+}
+
+.addog-btn:hover{
+    color: #d22938;
+}
