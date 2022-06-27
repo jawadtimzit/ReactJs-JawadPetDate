@@ -4,15 +4,15 @@ This application is a Pet Date Dog application where dog owners can access the w
 
 ## Technologies:
 
-* Springboot
-* Intellij IDE
-* Maven
+* ReactJs 17.0.2
+* NodeJs and NPM
+* VS code IDE
 * Java corretto 17
-* Spring JPA
-* MariaDB / HeidiSQL
-* Spring Security JWT
-* ReactJs
-* Postman
+* Bootstrap
+* Axios Library
+* Snippets
+* Routing
+* React Icons
 * Heroku
 * AWS S3
 * Docker
