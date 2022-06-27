@@ -1,4 +1,4 @@
-# Springboot Application / Back end
+# ReactJs Application / Front end
 
 This application is a Pet Date Dog application where dog owners can access the website, check dogs that are avilabe to hang out with and send them a message to set up a time to meet and play. Also, users can check available pet Toys and buy them. 
 
