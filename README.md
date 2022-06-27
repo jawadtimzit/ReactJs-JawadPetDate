@@ -27,7 +27,7 @@ This application is a Pet Date Dog application where dog owners can access the w
 * Send message to dog
 * Check available toys
 * Pay for a toy
-* 
+
 ## Database Design: 
 Coming soon...
 
