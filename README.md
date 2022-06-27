@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Springboot Application / Back end
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is a Pet Date Dog application where dog owners can access the website, check dogs that are avilabe to hang out with and send them a message to set up a time to meet and play.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+* Springboot
+* 
 
 ### `npm start`
 
