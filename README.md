@@ -7,7 +7,6 @@ This application is a Pet Date Dog application where dog owners can access the w
 * ReactJs 17.0.2
 * NodeJs and NPM
 * VS code IDE
-* Java corretto 17
 * Bootstrap
 * Axios Library
 * Snippets
