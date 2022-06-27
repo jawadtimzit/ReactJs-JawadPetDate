@@ -22,10 +22,10 @@ This application is a Pet Date Dog application where dog owners can access the w
 * Add/Delete/Update dogs
 
 ### Customer / User:
-* Check Available
+* Check Available dogs
 * Filter to check availabe dogs based on breed, gender, and city location
-* send message to dog
-* check available toys
+* Send message to dog
+* Check available toys
 * Pay for a toy
 * 
 ## Database Design: 
