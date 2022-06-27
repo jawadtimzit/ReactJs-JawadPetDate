@@ -5,6 +5,7 @@ This application is a Pet Date Dog application where dog owners can access the w
 ## Technologies:
 
 * Springboot
+* Intellij IDE
 * Maven
 * Java corretto 17
 * Spring JPA
