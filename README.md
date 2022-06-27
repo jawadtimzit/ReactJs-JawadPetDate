@@ -42,7 +42,7 @@ Coming Soon
 ## Testing:
 Coming soon...
 
-## Deployement:
+## Deployment:
 Coming soon...
 
 
