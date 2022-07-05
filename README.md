@@ -1,6 +1,6 @@
 # ReactJs Application / Front end
 
-This application is a Pet Play Date Dog application where dog owners can access the website, check dogs that are avilabe to hang out with and send them a message to set up a time to meet and play. Also, users can check available pet Toys and buy them. 
+This application is a Pet Play Date Dog application where dog owners can access the website, check dogs that are avilabe to hang out with and send them a message to set up a time to meet and play. Also, users can check available pet Toys and buy them using PayPal API. 
 
 ## Technologies:
 
@@ -31,7 +31,9 @@ This application is a Pet Play Date Dog application where dog owners can access 
 * Pay for a toy
 
 ## Database Design: 
-Coming soon...
+
+![image](https://user-images.githubusercontent.com/56841959/177401335-f3c5d497-0935-4a2c-9a63-daac26149915.png)
+
 
 ## Application Architecture:
 
