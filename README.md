@@ -32,7 +32,7 @@ This application is a Pet Play Date Dog application where dog owners can access 
 
 ## Database Design: 
 
-![image](https://user-images.githubusercontent.com/56841959/177401335-f3c5d497-0935-4a2c-9a63-daac26149915.png)
+![petfundate-ER drawio](https://user-images.githubusercontent.com/56841959/177401782-6ad29d72-0a51-4f06-a465-6a99e7181ca0.png)
 
 
 ## Application Architecture:
@@ -47,6 +47,6 @@ Coming Soon
 Coming soon...
 
 ## Deployment:
-Coming soon...
+Coming soon...Heroku + Docker
 
-
+## Application Demo:
