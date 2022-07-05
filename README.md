@@ -26,15 +26,17 @@ This application is a Pet Play Date Dog application where dog owners can access 
 ### Customer / User:
 * Check Available dogs
 * Filter to check availabe dogs based on breed, gender, and city location
-* send message to dog
-* check available toys
+* Send message to dog
+* Check available toys
 * Pay for a toy
 
 ## Database Design: 
 Coming soon...
 
 ## Application Architecture:
-Coming soon...
+
+![image](https://user-images.githubusercontent.com/56841959/177401140-66919e99-9c76-44a6-866b-32e71d0fc9c8.png)
+
 
 ## Security:
 Coming Soon
