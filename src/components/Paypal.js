@@ -27,7 +27,7 @@ function Paypal() {
         <span className="book-price"></span>
       </p>
       <PayPalScriptProvider
-        options={{ "client-id": "AQgNfS8ugb_WQqhUBNnUj8-AyBltcGePJ_TcXhY7M0IiIsJTGOo_KeKDJLBH5ONWx1lC1meujFNsw5c5" }}
+        options={{ "client-id": "put your clinet id here" }}
       >
         <PayPalButtons
           createOrder={(data, actions) => {

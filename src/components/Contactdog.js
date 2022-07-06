@@ -13,12 +13,12 @@ export default class Contactdog extends Component {
         emailjs
           .sendForm(
            // "replace with service id"
-             'service_3ag7res' ,
+            
             //"replace with template id"
-            'template_3paq5w7',
+            
             e.target,
             //"replace with user id"
-            'IxjsYEV0leptlrE8J'
+           
           )
           .then(
             (result) => {
