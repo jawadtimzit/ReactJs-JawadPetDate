@@ -44,7 +44,9 @@ This application is a Pet Play Date Dog application where dog owners can access 
 Coming Soon
 
 ## Testing:
-Coming soon...
+* JUnit 
+* AssertJ
+* Dependencies: H2 Database and Test starter package that was added to pom.xml by spring initializer when we created our project
 
 ## Deployment:
 Coming soon...Heroku + Docker
