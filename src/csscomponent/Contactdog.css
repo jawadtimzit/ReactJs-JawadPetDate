@@ -1,0 +1,9 @@
+.contact-btn-submit{
+    background-color: orangered;
+    color: white;
+    border-radius: 0.5rem;
+    border-block: white;
+    border-left: white;
+    border-right: white;
+    padding: 0.2cm;
+}

@@ -4,7 +4,9 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Adminmanagement from '../components/Adminmanagement'
+import Adminmanagement from '../components/Adminmanagement';
+
+
 
 const Login = () => {
     const [user, setUser] = useState({username: '', password: ''})
@@ -27,7 +29,7 @@ const Login = () => {
         }
         else {
           toast.warn("Check your username and password", {
-            position: toast.POSITION.BOTTOM_LEFT
+            position: toast.POSITION.TOP_RIGHT
           }) 
         }
       })
@@ -39,12 +41,12 @@ const Login = () => {
     }
     else {
       return (
-        <div>
+        <div style={{textAlign:'center', marginTop:100}}>
           <TextField name="username" 
             label="Username" onChange={handleChange} /><br/> 
           <TextField type="password" name="password" 
             label="Password" onChange={handleChange} /><br/><br/> 
-          <Button variant="outlined" color="primary" 
+          <Button style={{backgroundColor:'green'}}
             onClick={login}>
             Login
           </Button>

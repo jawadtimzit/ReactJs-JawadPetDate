@@ -1,28 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
 .list-page{
-    
-    background-color:rgb(177, 175, 173);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    background-color: #adacac;
 }
-.listdog-h2{
+.listdog-h4{
+    margin-top: 40px;
+    font-family: 'Allura', cursive;
+    font-size: 52px;
+    margin-bottom: 5px;
     text-align: center;
+    color:coral;
     
+  
 }
-.addog-btn{
-    background-color: #27ac3d;
-    cursor: pointer;
-    color: rgb(14, 13, 13);
-    font-size: 16px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    padding: 12px 30px;
-    border-radius: 5px;
-    
-    margin-left: 10px;
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.header-table{
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+    margin-top: 20px;
     margin-bottom: 60px;
-    transition: .3s;  
-    display: inline-flex;
-    
 }
 
-.addog-btn:hover{
-    color: #d22938;
+.header-table thead th {
+    position: sticky;
+    top: 0;
+    background-color: black;
+    color: #e6e7e8;
+    font-size: 15px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #f3f05b;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+td img {
+    
+   
+    border-radius: 7%;
+    border: 3px solid #e6e7e8;
+}
+tr:nth-child(odd) {
+    background-color: #edeef1;
+}
+
+
+tr:hover td {
+    color: #101111;
+    cursor: pointer;
+    background-color: #d47b15;
+}
+.addog-btn{
+    margin-top: 100px;
+    color: #d47b15;
 }

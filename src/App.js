@@ -5,16 +5,19 @@ import './App.css';
 
 import Header from './components/Header';
 import Adminmanagement from './components/Adminmanagement';
-import Home from './components/Home';
 import Admincreatedog from './components/Admincreatedog'
 import Adminupdatedog from './components/Adminupdatedog';
-import Adminviewdogdetails from './components/Adminviewdogdetails';
-import Adminlogin from './components/Login';
+
 import Login from './components/Login';
-import Customeralldoglist from './components/Customeralldoglist';
+
 import Customerlistalldogs from './components/Customerlistalldogs';
-
-
+import DogsHome from './components/DogsHome';
+import Toylist from './components/Toylist';
+import Footer from './components/Footer';
+import Dogfiltering from './components/Dogfiltering';
+import Contactdog from './components/Contactdog';
+import Paypal from './components/Paypal';
+import Routetopay from './components/Routetopay';
 
 function App() {
   return (
@@ -29,28 +32,34 @@ function App() {
           <Link to ="/listdogs"></Link>
           <Link to = "/updatedog/:id"></Link>
           <Link to = "/viewdog/:id"></Link>
-
+          <Link to = "/newhome"></Link>
+          <Link to = "/toylist"></Link>
+          <Link to = "/customerviewdog"></Link>
+          <Link to = "/filtering"></Link>
+          <link to ="/sendemail"></link>
+          <link to ="/payamout"></link>
           
           <Header/>  {/* render all the time in all the pages*/}
-          
               <div>
               {/* Switch compoenent makes sure that only one componenet inside it shows*/}
               <Switch>
-                  <Route path = "/" exact component ={Home}></Route> {/*route without components inside fragment */}
-                  <Route path = "/login" component ={Login}></Route>  {/*route without components inside fragment */}
+                 {/* Admin features */}
+                  <Route path = "/" exact component ={DogsHome}></Route> 
+                  <Route path = "/login" component ={Login}></Route>  
                   <Route path = "/listdogs" component ={Adminmanagement}></Route>
                   <Route path = "/addog" component ={Admincreatedog}></Route>
                   <Route path = "/updatedog/:id" component ={Adminupdatedog}></Route>
-                  <Route path = "/viewdog/:id" component ={Adminviewdogdetails}></Route>
-                  <Route path = "/customerlistdogs" component ={Customeralldoglist}></Route>
-                  
-              
+
+                   {/* User features */}
+                  <Route path = "/customerlistdogs" component ={Customerlistalldogs}></Route>
+                  <Route path = "/filtering" component ={Dogfiltering}></Route>
+                  <Route path = "/sendemail" component ={Contactdog}></Route>    
+                  <Route path = "/toylist" component ={Toylist}></Route> 
+                  <Route path = "/payamount" component ={Paypal}></Route> 
+                  <Route path = "/routetopay" component ={Routetopay}></Route> 
               </Switch>
               </div>
-             
-            
-                 {/*here you render component name render in main first page and do not render in routing other pages*/}
-             
+            <Footer/> {/* render all the time in all the pages*/}    
       </Router>  
     </div>
  
