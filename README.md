@@ -41,7 +41,7 @@ This application is a Pet Play Date Dog application where dog owners can access 
 
 
 ## Security:
-* JWT: Jason Web Token authentication 
+* JWT: Jason Web Token 
           
 ![login](https://user-images.githubusercontent.com/56841959/177439793-8d758b8d-b330-45e6-bead-38827c7b5f2f.JPG)
 
@@ -70,4 +70,8 @@ This application is a Pet Play Date Dog application where dog owners can access 
 Coming soon...Heroku + Docker
 
 ## Application Demo:
-Coming soon...
+
+![image](https://user-images.githubusercontent.com/56841959/177440733-2b686128-4066-4130-8c47-d1bf593fecf6.png)  
+![demo2](https://user-images.githubusercontent.com/56841959/177440878-edff12d9-ff04-4d1d-be75-fdb19eb582ec.JPG)
+
+
