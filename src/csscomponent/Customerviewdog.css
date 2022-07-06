@@ -1,0 +1,37 @@
+.items-display{
+    flex-direction: row;
+    font: size 20px;
+    flex-wrap: wrap;
+    
+    display: grid;
+         
+    grid-template-columns: repeat(3, 1fr);
+         
+    grid-auto-rows: auto;
+         
+    grid-gap: 1rem;
+
+    border: 2px solid #e7e7e7;
+ 
+    border-radius: 4px;
+ 
+    padding: .5rem;
+}
+.card-text{
+    color:black;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+}
+
+.filter-span{
+    color:orangered;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   
+}
+.btn-food-section{
+    color:purple;
+    font-size: large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: yellowgreen;
+    font-style: italic;
+}

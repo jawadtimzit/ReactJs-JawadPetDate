@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Adminmanagementservice from '../services/Adminmanagementservice';
+import {SERVER_URL} from '../services/Adminmanagementservice.js';
+import "../csscomponent/Adminupdatedog.css";
 import axios from 'axios';
 
 
@@ -36,39 +38,74 @@ export default class Adminupdatedog extends Component {
         this.saveUpdatedDog = this.saveUpdatedDog.bind(this);
         this.cancel = this.cancel.bind(this);
         
+        
     }
 
-    componentDidMount(){
+    // lets call method get id inside componentDidMount to get id first thing 
+    componentDidMount(){ 
+      const dogId = this.props.match.params.id;
+          if (dogId) {
+      this.findDogById(dogId);
+      }
+    }
 
+    // find dog by id method 
+    findDogById = (dogId) => {
+      // get token from sessionStorage
       const token = sessionStorage.getItem("jwt");
-        const config ={
-            headers: {
-                Authorization: 'Bearer' + token
-            }
-        };
-      Adminmanagementservice.getDogById(this.state.id, config).then( (res)=>{
-        let dog = res.data;
-        this.setState({breed: dog.breed, name: dog.name, age: dog.age, gender: dog.gender,
-          email: dog.email, imageurl: dog.imageurl, description: dog.description
-        });
-  
+      const config ={
+        headers: {
+            Authorization: 'Bearer' + token
+        }
+    };
+    // get id by calling api endpoint of dog 
+      axios.get(SERVER_URL +'api/admin/dogs/' +dogId , config)
+      .then(response =>{
+        if (response.data != null) {
+          this.setState({
+            id: response.data.id,
+            breed: response.data.breed,
+            name:response.data.name,
+            age: response.data.age,
+            gender: response.data.gender,
+            email: response.data.email,
+            imageurl: response.data.imageurl,
+            description: response.data.description,
+          });
+        }
+        // catch error 
+      }).catch((error)=>{
+        console.error("Error "+error);
       });
+      
     }
-
-    // updateDog method
-    saveUpdatedDog = (e) =>{
-      e.preventDefault();
-      // lets get data here 
-      let dog = {breed: this.state.breed, name: this.state.name, age:this.state.age, gender: this.state.gender,
+    // after we get id of dog I will catch it and assign it to dog object with input data in form 
+    saveUpdatedDog = (event)=>{
+      event.preventDefault();
+      let dog = {id: this.state.id, breed: this.state.breed, name: this.state.name, age:this.state.age, gender: this.state.gender,
                 email: this.state.email, imageurl: this.state.imageurl, description: this.state.description};
-      console.log('dog=>' +JSON.stringify(dog));
-     
-      // inside this updateDog method lets call updateDog so we can save the form input to databse 
-      Adminmanagementservice.updateDog(dog, this.state.id).then(res =>{
-        // once we dog updated we will route back to admin page
-        this.props.history.push('/listdogs');
-      });
-    }
+                console.log('dog=>' +JSON.stringify(dog));
+                // this dog object has data here that needs to be sent to backend through axios put
+
+    const token = sessionStorage.getItem("jwt");
+    const config ={
+        headers: {
+            Authorization: 'Bearer' + token
+        }
+    };
+    // send data that we captured in dog object in form to backend we pass id and object with JWT token 
+    axios.put(SERVER_URL + 'api/admin/dogs/'+this.state.id,dog,config).then(res =>{ 
+                        console.log(res);
+    // once dog updated we will route back to admin page
+         this.props.history.push('/listdogs');
+        console.log(res);
+       },
+         err=> {
+           console.log(err);
+         }
+       );    
+    
+      }
 
     // lets route back to dog list when I click canel
     cancel(){
@@ -114,12 +151,12 @@ export default class Adminupdatedog extends Component {
 
   render() {
     return (
-      <div>
+      <div className='content-wrapper'>
           <div className = "container">
-            <div className = "row">
+            <div className = "row" style={{marginTop:50, marginBottom:100}}>
               {/* lets create a card */}
               <div className ="card col-md-6 offset-md-3 offset-md-3">
-                <h3 className ="text-center"> Update Dog</h3>
+                <h3 className ="h3-update"> Update Dog</h3>
                 {/* lets create a card body */}
                 <div className = "card-body">
                   {/* lets create a form */}

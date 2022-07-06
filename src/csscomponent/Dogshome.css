@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+
+.btn-dogshome {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 2.8rem;
+    border-radius: 5rem;
+    border-top-left-radius: 0;
+    border: 0.2rem solid #130f40;
+    cursor: pointer;
+    background: none;
+    color: #2d2d6d;
+    font-size: 1.7rem;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+  }
+  section {
+    padding: 5rem 9%;
+  }
+  .btn-doghome:hover{
+    color: #fff;
+  }
+
+  .bk-dog-pic{
+    width: 100%;
+    max-height: 18cm;
+  } 
+
+  .home {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .home .content {
+    position: absolute;
+    width: 35rem;
+    
+
+    }
+.h3-bkdog{
+    font-size: 4rem;
+    color:white;
+    padding-bottom: 1rem;
+    
+}
+.span-bkdog{
+    color:coral;
+}  
+@mixin btn-doghome{
+    
+}
+
+.btn-dogshome:before{
+    
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: #130f40;
+        z-index: -1;
+        -webkit-transition: .2s linear;
+        transition: .2s linear;
+        -webkit-clip-path: circle(0% at 0% 5%);
+                clip-path: circle(0% at 0% 5%);
+      
+}
+.btn-dogshome:hover{
+    -webkit-clip-path: circle(100%);
+            clip-path: circle(100%);
+  }
+
+.btn-dogshome {
+    color: white;
+    border-color: white;
+ } 
+  
+.btn-doghome:hover{
+    color:black;
+} 
+.wave-pic{
+  margin-top: 10px;
+  text-shadow:#2d2d6d;
+}
+.about-section{
+    display: flex;
+    gap:2rem;
+    padding-top: 0%;  
+}
+
+.image-foodog{
+    
+    flex:1 1 40rem;
+}
+.content-about{
+    padding-top: 50px;  
+ 
+}
+
+.h3-foodog{
+    font-size: 2.3rem;
+    color:black;  
+    text-align: center;   
+}
+.dogfood-span{
+    color: coral;
+}
+.dog-food-p{
+    font-size: 1rem;
+    color:black;
+    padding:1rem 0;
+    line-height: 2;
+}
+.dog-toy{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding:2rem 0;
+  flex:1 1 40rem
+}
+.h3-dog-toy{
+  font-size: 4rem;
+  color:black;     
+}
+.dogtoy-span{
+  color: coral;
+}
+.image-foodog{
+    
+  flex:1 1 40rem;
+}
+
+.services .box-container{
+ display:grid;
+ grid-template-columns: auto auto auto;
+ padding: 10px;
+ 
+
+}
+.box{
+  padding:3rem;
+  background-color: lightgoldenrodyellow;
+  text-align: center;
+  border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+ 
+    
+}
+.box:hover{
+  border-radius: .5rem;
+  
+}
+.service-h3{
+      font-size: 2.2rem;
+      color:black;
+      padding:1rem 0;
+}
+
+.span-services{
+  color:coral;
+
+}
+.heading{
+  text-align: center;
+}
+
+.btn-services{
+  position: absolute;
+  bottom:-2rem; right:2rem;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Adminmanagementservice from '../services/Adminmanagementservice'
 import {SERVER_URL} from '../services/Adminmanagementservice.js';
+import "../csscomponent/Adminmanagement.css";
 import axios from 'axios';
 
 
@@ -51,6 +52,7 @@ export default class adminmanagement extends Component {
             console.log(response);
             this.setState({dogs: this.state.dogs.filter(dog=>dog.id !==dogId)})  
             console.log(response); 
+            alert("Are you sure you want to delete");
         },
 
         err => {
@@ -59,73 +61,13 @@ export default class adminmanagement extends Component {
         
         );
     }
-    //    Adminmanagementservice.deleteDog(id).then(res=>{
-    //         console.log(res);
-    //         this.setState({dogs: this.state.dogs.filter(dog=>dog.id !==id)});
-    //         console.log(res);
-    //         },
-    //         err => {
-    //             console.log(err)
-    //         }
-    //    );
-
-    // deleteDog(dogId){
-    //     return axios.delete(SERVER_URL + 'api/admin/dogs/' + dogId);
-    // }
-     
-     //removeDog(id){
-        // const token = sessionStorage.getItem("jwt");
-        // const authAxios = axios.delete({
-        //     baseURL: SERVER_URL + 'api/admin/dogs',
-        //     headers:{
-        //         Authorization: 'Bearer' + token
-        //     }
-        //  })
-        // const token = sessionStorage.getItem("jwt");
-        // const config ={
-        //     headers: {
-        //         Authorization: 'Bearer' + token
-        //     }
-        // };
-        
-        //     return axios.delete(SERVER_URL + 'api/admin/dogs/${id}' + id , config).then(res=>{
-        //     this.setState({dogs: this.state.dogs.filter(dog=>dog.id !==id)});
-        //     });
-
-        // ----old down
-    //    Adminmanagementservice.deleteDog(id).then(res=>{
-    //         console.log(res);
-    //         this.setState({dogs: this.state.dogs.filter(dog=>dog.id !==id)});
-    //         console.log(res);
-    //         },
-    //         err => {
-    //             console.log(err)
-    //         }
-    //    );
-       
-    //    res => {
-    //     this.setState({dogs:res.data})
-    //     console.log(res);
-    // },
-    // err => {
-    //     console.log(err)
-    // }
-       
-        //-----old here up-------------------
-        // no routing for this compoenent 
-        // this.props.history.push(`/deletedog/${id}`);
-    // }
-
-
+    
     checkDog(id){
         this.props.history.push(`/viewdog/${id}`)
     }
 
     // lets all the bade url using componentdimount
     componentDidMount(){ 
-        // Adminmanagementservice.getDogs().then((res) =>{
-        //     this.setState({dogs:res.data})
-        // });
         this.fetchDogs();
     }
 
@@ -157,17 +99,18 @@ export default class adminmanagement extends Component {
   
     render() {
     return (
-        <div class="list-page">
-          <h2 class="listdog-h2">Dogs List</h2>
+        <div>
+            <div>
+          <h4 class="listdog-h4">Our Admin Dog List</h4>
             {/* create a button to add dogs*/}
             
-                <div className = "row" style={{marginLeft:10}}>
-                    <a class ="addog-btn" style={{width:300}} href="/addog" role="button" onClick={this.addDog} >Add new Dogs to Database</a>
+                <div>
+                    <a class ="addog-btn" className="btn btn-primary" href="/addog" role="button" onClick={this.addDog} >Add New Dog</a>
                 
             </div>
           {/* create table with some css classes */}
-            <div className ="row" style={{marginLeft:5}}>
-                <table className = "table table-striped table-bordered">
+            <div className='header-table'>
+                <table>
                     {/*table header*/}
                     <thead>
                         {/*table row*/}
@@ -199,22 +142,22 @@ export default class adminmanagement extends Component {
                                         <td>< img src = {dog.imageurl} style={{width:150}}/></td>  
                                         <td>{dog.description}</td>
                                         <td> 
-                                            <button onClick={()=>this.editDog(dog.id)} className="btn btn-info">Update</button>
+                                            <button type="button" onClick={()=>this.editDog(dog.id)} className="btn btn-dark">Update</button>
                                             <button type="button" style={{margin:10}} onClick={()=>this.removeDog(dog.id)} className="btn btn-danger">Delete</button>
-                                            <button onClick={()=>this.checkDog(dog.id)} className="btn btn-success">View</button>
+                                            {/*<button onClick={()=>this.checkDog(dog.id)} className="btn btn-success">View</button>*/}
                                         </td>
 
                                     </tr>
                                 )
 
                             }
-                        </tbody>  
+                       </tbody>  
                     
-                </table>
+               </table>
 
             </div>
-          
-            </div>
+          </div>
+        </div>
     )
   }
 }

@@ -5,8 +5,12 @@ import {SERVER_URL} from '../services/Adminmanagementservice.js';
 import  '../csscomponent/Adminmanagement.css'
 import axios from 'axios';
 
+const initialState = {
+  emailError:"", 
+}
 
 export default class Admincreatedog extends Component {
+  
     constructor(props){
         super(props)
         this.state={
@@ -40,46 +44,34 @@ export default class Admincreatedog extends Component {
     // saveDog method
     saveDog = (e) =>{
       e.preventDefault();
+      const isValid = this.validate();
+      if(!isValid){
       // lets get data here 
       let dog = {breed: this.state.breed, name: this.state.name, age:this.state.age, gender: this.state.gender,
                 email: this.state.email, imageurl: this.state.imageurl, description: this.state.description};
       console.log('dog=>' +JSON.stringify(dog));
-     
-      // if(this.state.breed!="" && this.state.name!="" && this.state.age!=null && this.state.gender!="" &&
-      // this.state.email!="" && this.state.imageurl!="" && this.state.description!=""){
-        // inside this saveDog method lets call crateDog so we can save the form input to databse 
-        // old old old -----------------
-        // Adminmanagementservice.createDog(dog).then(res =>{
-        //   // once we save we will route back to admin page
-        //     this.props.history.push('/admin');
-        // });
-        // ------------------------------------------------
-        // return axios.post(DOG_API_BASE_URL, dog);
-
+  
         const token = sessionStorage.getItem("jwt");
         const config ={
             headers: {
                 Authorization: 'Bearer' + token
             }
         };
+
         axios.post(SERVER_URL + 'api/admin/dogs', dog, config).then(
             res => {
-
+              alert("Dog was saved succefully");
               this.props.history.push('/listdogs');
                 //this.setState({dogs:res.data})
                 console.log(res);
-            },
-            err => {
-                console.log(err)
             });
-
-      // }else{
-      //   alert("Please Fill All Fields");
-      // }
-      
+          }else{
+            alert("Email should be in a valid format")
+            this.setState(initialState);
+          }
     }
 
-    // lets route back to dog list when I click canel
+    // lets route back to dog list when I click cancel
     cancel(){
       this.props.history.push('/listdogs');
     }
@@ -119,21 +111,29 @@ export default class Admincreatedog extends Component {
       // lets capture event and assign value to description we get in handler upon input  by using setState method
       this.setState({description: event.target.value});
     }
-
+    
+    // validation
+    validate = () =>{
+      let emailError="";
+    if(!this.state.email.includes('@')){
+        emailError = 'invalid email';   
+    }
+  };
 
   render() {
     return (
      
       <div className="content-wrapper">
           <div className = "container">
-            <div className = "row">
+            <div className = "row" style={{marginTop:50, marginBottom:100}}>
               {/* lets create a card */}
               <div className ="card col-md-6 offset-md-3 offset-md-3">
-                <h3 className ="text-center"> Add Dog</h3>
+                <h3 className ="h3-update"> Add New Dog</h3>
                 {/* lets create a card body */}
                 <div className = "card-body">
                   {/* lets create a form */}
                   <form>
+                    
                     <div className = "form-group">
                       {/* lets create input fileds that we will use to inpu all data fields*/}
                      
@@ -149,8 +149,10 @@ export default class Admincreatedog extends Component {
                         <input placeholder="gender" name="gender" className = "form-control"
                         value={this.state.gender} onChange={this.changeGenderHandler}/>
                         <br/>
+                        
                         <input placeholder="email" name="email" className = "form-control"
                         value={this.state.email} onChange={this.changeEmailHandler}/>
+                            {this.state.emailError}
                         <br/>
                         <input placeholder="imageurl" name="imageurl" className = "form-control"
                         value={this.state.imageurl} onChange={this.changeImageUrlHandler}/>
