@@ -47,6 +47,20 @@ Coming Soon
 * JUnit 
 * AssertJ
 * Dependencies: H2 Database and Test starter package that was added to pom.xml by spring initializer when we created our project
+          <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-test</artifactId>
+             <scope>test</scope>
+          </dependency>
+    
+          <dependency>
+             <!--H2 database will be used only for running tests-->
+             <groupId>com.h2database</groupId>
+             <artifactId>h2</artifactId>
+             <scope>test</scope>
+          </dependency>
+
+
 
 ## Deployment:
 Coming soon...Heroku + Docker
