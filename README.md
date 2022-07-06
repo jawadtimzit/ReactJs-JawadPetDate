@@ -71,7 +71,7 @@ Coming soon...Heroku + Docker
 
 ## Application Demo:
 
-![image](https://user-images.githubusercontent.com/56841959/177440733-2b686128-4066-4130-8c47-d1bf593fecf6.png)  
+![demo1](https://user-images.githubusercontent.com/56841959/177441022-94d89792-6297-4032-bf31-e629bccb151a.JPG) 
 ![demo2](https://user-images.githubusercontent.com/56841959/177440878-edff12d9-ff04-4d1d-be75-fdb19eb582ec.JPG)
 
 
